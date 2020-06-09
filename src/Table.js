@@ -5,10 +5,11 @@ const TableHeader = () => {
     return (
         <thead>
             <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Name</th>
+            <th scope="col">Job</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">action</th>
             </tr>
         </thead>
     )
@@ -21,7 +22,7 @@ const TableBody = props => {
                 <td>{row.name}</td>
                 <td>{row.job}</td>
                 <td>{row.age}</td>
-                <td>{row.handle}</td>
+                <td>{row.gender}</td>
                 <td>
                     <button className="btn btn-primary" onClick={() => props.removeCharacter(index)}>Delete</button>
                 </td>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Table from './Table'
 import Header from './Header'
+import Form from './Form'
 
 class App extends Component {
     state = {
@@ -11,6 +12,12 @@ class App extends Component {
             // { name: 'Dennis', job: 'Bartender', age: 30, handle: '@me' }
         ]
     };
+
+    handleSubmit = character => {
+        console.log(character)
+        this.setState({ characters: [...this.state.characters, character]})
+    }
+
     render() {
         // const characters = [
         //     { name: 'Charlie', job: 'Janitor', age: 30, handle: '@me' },
@@ -27,7 +34,10 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row body">
-                    <div className="col-md-12">
+                    <div className="col-md-4">
+                        <Form handleSubmit={this.handleSubmit}/>
+                    </div>
+                    <div className="col-md-8">
                         <Table characterData={characters} removeCharacter={this.removeCharacter} />
                     </div>
                 </div>
