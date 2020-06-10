@@ -36,6 +36,7 @@ class Form extends Component {
                     type="text"
                     name="name"
                     id="name"
+                    required
                     value={name}
                     onChange={this.handleChange} />
                 </div>
